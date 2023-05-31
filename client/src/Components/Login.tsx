@@ -59,7 +59,7 @@ const Login = () => {
           </div>
           <div>
             <div className="input-wrapper">
-              {/* <div className='password-container'> */}
+        
               <input
                 type={showPassword ? "text" : "password"}
                 id="password"
@@ -75,7 +75,7 @@ const Login = () => {
               >
                 {showPassword ? "Hide" : "Show"}
               </span>
-              {/* </div> */}
+   
             </div>
 
             <p>Forgot Password?</p>

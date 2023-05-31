@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import "./Login.scss"
+import "./Signup.scss"
 import Logo from "../Images/LendSQRLogo.svg"
 import LoginImage from "../Images/LendSQRLoginImage.svg"
-import axios from 'axios'
+
 
 
 interface FormValues {
@@ -34,35 +34,36 @@ const Signup = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-   
+
         console.log(formValues, "Uche");
 
 
         fetch("http://localhost:3003/signup", {
-        method:"post",
-        headers:{
-            "Content-Type":"application/json"
-        },
-        body:JSON.stringify(formValues)
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formValues)
         })
-        .then(res=>res.json())
-        .then(data=>{
-            console.log(data)
-        })
-        .catch((error)=>{
-            console.log(error)
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
+            .catch((error) => {
+                console.log(error)
+            })
     };
 
     return (
-        <div className="login-container">
-            <div className="login-images">
+
+        <div className="signup-container">
+            <div className="signup-images">
                 <img src={Logo} alt="LendSQL" />
                 <img src={LoginImage} alt="LendSQL" />
             </div>
 
-            <div className="login-form">
-                <h1>Sign up </h1>
+            <div className="signup-form">
+                <h1>Sign up</h1>
                 <h6>Enter details to signup.</h6>
                 <form onSubmit={handleSubmit}>
                     <div>
@@ -89,7 +90,6 @@ const Signup = () => {
                     </div>
                     <div>
                         <div className="input-wrapper">
-                            
                             <input
                                 type={showPassword ? "text" : "password"}
                                 id="password"
@@ -105,14 +105,10 @@ const Signup = () => {
                             >
                                 {showPassword ? "Hide" : "Show"}
                             </span>
-
                         </div>
-
-
-
                     </div>
 
-                    <button type="submit">sign up</button>
+                    <button type="submit">Sign up</button>
                 </form>
             </div>
         </div>

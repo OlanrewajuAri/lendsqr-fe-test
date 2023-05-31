@@ -1,3 +1,41 @@
-// .Lendnavbar{
-//     display: flex !important;
-//   
+.spaced-item {
+    margin-left: 3rem;
+  }
+  
+  .spaced-list .nav-link {
+    margin-right: 10px;
+  }
+  
+  .spaced-list li a {
+    margin-right: 10px;
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.04em;
+    color: #213f7d;
+  }
+  .spaced-list a {
+    text-decoration: none;
+  }
+  .navitem-button {
+    gap: 100px;
+  }
+  
+  .navitem-button button {
+    background: #39cdcc;
+    border-radius: 8px;
+    border: 1px solid #39cdcc;
+    padding: 0.5rem 1rem;
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+  
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-right: 10px;
+  }
+  

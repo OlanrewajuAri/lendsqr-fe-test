@@ -4,8 +4,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 100vh;
-
 }
 
 .login-images {
@@ -19,8 +17,7 @@
   }
 
   img:last-child {
-    // width: 200px;
-    // height: 200px;
+
   }
 }
 
@@ -45,22 +42,6 @@
   }
 
   form {
-    div {
-    }
-
-    
-    .input-wrapper {
-      position: relative;
-    }
-    // .password-container {
-    //   display: flex;
-    //   align-items: center;
-    //   width: 350px; /* Set the width of the container */
-    //   margin-top: 1rem;
-    //   border: 2px solid rgba(84, 95, 125, 0.15);
-    //   border-radius: 5px;
-    // }
-
     input[type="email"],
     input[type="password"] {
       font-family: "Avenir Next";
@@ -73,22 +54,15 @@
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
     
-      width: 350px !important;
-      min-width: 350px !important;
+      // width: 350px !important;
+      // min-width: 350px !important;
 
-      background: $white-color;
+      // background: $white-color;
       border: 2px solid rgba(84, 95, 125, 0.15);
       border-radius: 5px;
       margin-top: 1rem;
     }
-    span.password-toggle {
-      position: absolute;
-      right: 10px;
-      top: 65%;
-      transform: translateY(-50%);
-      /* styles remain unchanged */
-    }
-  
+ 
 
     span {
       font-family: "Avenir Next";
@@ -117,8 +91,6 @@
     button[type="submit"] {
       background: $greenish-color;
       border-radius: 8px;
-      width: 350px;
-      height: 40px;
       border: 0px solid $greenish-color;
       margin-top: 0.5rem !important;
       font-family: "Avenir Next";

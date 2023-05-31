@@ -1,0 +1,99 @@
+@import "../util//Variables.scss";
+.signup-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.signup-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  img:first-child {
+    width: 150px;
+    height: 150px;
+  }
+
+  img:last-child {
+
+  }
+}
+
+.signup-form {
+  h1 {
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: $purple-color;
+  }
+
+  h6 {
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: $grey-color;
+    margin-top: -1rem;
+  }
+
+  form {
+    input[type="name"],
+    input[type="email"],
+    input[type="password"] {
+      font-family: "Avenir Next";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      color: $greyish-color;
+      opacity: 0.6;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      border: 2px solid rgba(84, 95, 125, 0.15);
+      border-radius: 5px;
+      margin-top: 1rem;
+    }
+
+    .input-wrapper span {
+      font-family: "Avenir Next";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: $greenish-color;
+    }
+
+    p {
+      font-family: "Avenir Next";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: left;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: $greenish-color;
+    }
+
+    button[type="submit"] {
+      background: $greenish-color;
+      border-radius: 8px;
+      border: 0px solid $greenish-color;
+      margin-top: 0.5rem !important;
+      font-family: "Avenir Next";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: $white-color;
+    }
+  }
+}
