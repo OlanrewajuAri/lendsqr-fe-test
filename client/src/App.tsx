@@ -2,38 +2,46 @@
 import './App.css';
 
 import Index from "./pages";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation  } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Users from "./pages/users"
 import UserDetails from "./pages/userdetails";
 
-
-
-
-function App() {
+const AppContainer: React.FC = () => {
+  const location = useLocation();
+  const showNavbar = location.pathname !== '/';
 
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <div className="content-container">
-          <Routes>
-            <Route path="/" element = {<Index/>}/>
-            <Route path="/users" element = {<Users/>}/>
-            <Route path="/user-details" element={<UserDetails />} />
-          
-          </Routes>
-        </div>
+    <div className="App">
+      {showNavbar && <Navbar />}
+      <div className="content-container">
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/user-details" element={<UserDetails />} />
+        </Routes>
       </div>
-    </Router>
-
-  
+    </div>
   );
-}
+};
 
-
-
-
-
+const App: React.FC = () => {
+  return (
+    <Router>
+      <AppContainer />
+    </Router>
+  );
+};
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+

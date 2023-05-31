@@ -3,7 +3,7 @@ import Filter1 from "../Images/Filter1.svg"
 import Filter2 from "../Images/Filter2.svg"
 import Filter3 from "../Images/Filter3.svg"
 import "./Filter.scss"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import queryString from "query-string";
 
 
@@ -40,8 +40,6 @@ const Filters: React.FC<FiltersProps> = ({ onClose, selectedItem }) => {
   return (
     <div>
       <div className='filter-main'>
-
-
         <div className='filter-sub' onClick={() => handleViewDetailsClick(selectedItem, 0)}>
           <img src={Filter1} />
           <p className='cursor-pointer'>View Details</p>
@@ -56,8 +54,11 @@ const Filters: React.FC<FiltersProps> = ({ onClose, selectedItem }) => {
         </div>
       </div>
 
+     
+
     </div>
   )
 }
 
 export default Filters
+

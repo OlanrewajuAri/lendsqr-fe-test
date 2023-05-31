@@ -20,6 +20,8 @@ import Business7 from "../Images/Business7.svg"
 import Business8 from "../Images/Business8.svg"
 import Business9 from "../Images/Business9.svg"
 import Settings1 from "../Images/Settings1.svg"
+import { useNavigate } from 'react-router-dom';
+import "./Sidebar.scss"
 
 
 
@@ -32,9 +34,9 @@ interface User {
 const Sidebar: React.FC = () => {
     const [selectedUser, setSelectedUser] = useState<User | null>(null);
 
-    // const [showUsers, setShowUsers] = useState(false);
-    // const [showUsersMe, setShowUsersMe] = useState(false);
-    // const navigate = useNavigate()
+    const [showUsers, setShowUsers] = useState(false);
+    const [showUsersMe, setShowUsersMe] = useState(false);
+    const navigate = useNavigate()
     const users: User[] = [
         { id: 1, name: 'Organization1' },
         { id: 2, name: 'Organization 2' },
@@ -46,9 +48,9 @@ const Sidebar: React.FC = () => {
     };
 
 
-    // const handleGurantorsClick = ()=>{
-    //     setShowUsersMe(!showUsersMe);
-    // }
+    const handleGurantorsClick = ()=>{
+        setShowUsersMe(!showUsersMe);
+    }
 
     return (
         <div className="sidebar overflow-y-auto">

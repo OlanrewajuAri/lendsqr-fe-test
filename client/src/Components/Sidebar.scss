@@ -11,24 +11,16 @@
 .sidebar-parent {
   margin-left: 1rem;
   margin-top: 1.5rem;
-
-
 }
 
 .sidebar {
-  // background-color: #213f7d;
-  display: flex;
+  display: flex !important;
   flex-direction: column; 
-  // position: fixed;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
   align-items: flex-start; 
   padding: 5px 10px 100px 5px; 
-
-
-  // top: 64px; /* Adjust this value based on your navbar height */
-  // left: 0;
   height:100%; 
-  // overflow: auto;
+
   width: 18%;
   
 }
@@ -79,7 +71,7 @@
 
 .users {
   position: fixed;
-  top: 64px; /* Adjust this value based on your navbar height */
+  top: 64px;
   left: 250px;
   width: calc(100vw - 250px);
   height: calc(100vh - 64px);
@@ -90,13 +82,16 @@
 }
 
 .users-item {
-  display: flex;
+  display: flex !important; 
   align-items: center !important;
   margin-top: 10px;
 }
 
 .user-Customer {
 margin-top: 2rem;
+}
+.user-Customer a{
+text-decoration: none;
 }
 .user-Gurantor {
 margin-top: 1rem;

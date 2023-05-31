@@ -2,14 +2,12 @@ import React, { useState } from 'react'
 import "./UserDetails.scss"
 import { useNavigate, useLocation, Link } from 'react-router-dom'
 import queryString from "query-string";
-// import ProfileImage from "../Images/ProfileImage.svg"
+
 import Tier1 from "../Images/Tier1.svg"
 import Tier2 from "../Images/Tier2.svg"
 import Tier3 from "../Images/Tier3.svg"
 import ArrowUsers from "../Images/ArrowUser.svg"
 
-
-// TbCurrencyNaira
 
 const UserDetails = () => {
 
@@ -33,13 +31,13 @@ const UserDetails = () => {
     const [activePage, setActivePage] = useState('');
 
     const handleLinkClick = (pageName: string) => {
-        // setActivePage(pageName)
+
         setActivePage(activePage === pageName ? '' : pageName);
     };
 
 
         const handleBackClick = () => {
-          navigate('/users'); // Replace '/users' with the actual URL of your users page
+          navigate('/users'); 
         };
 
 

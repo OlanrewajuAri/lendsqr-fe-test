@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import PhoneInput from 'react-phone-number-input';
+
 import 'react-phone-number-input/style.css';
 import ReactPaginate from 'react-paginate';
 import "./Users.scss"
@@ -13,6 +13,8 @@ import ArrowRight from "../Images/ArrowRight.svg"
 import ArrowLeft from "../Images/ArrowLeft.svg"
 import ThreeEyes from "../Images/ThreeEyes.svg"
 import Filters from './Filters';
+import { useNavigate } from 'react-router-dom';
+import queryString from "query-string";
 
 interface TableData {
   orgName: string;
@@ -22,6 +24,13 @@ interface TableData {
   createdAt: string;
   status: string;
 }
+
+
+
+type FiltersProps = {
+  onClose: () => void;
+  selectedItem: TableData;
+};
 const Users: React.FC = () => {
   const [data, setData] = useState<TableData[]>([]);
   const [currentPage, setCurrentPage] = useState(0);
@@ -41,6 +50,20 @@ const Users: React.FC = () => {
   };
   const [usersCount, setUsersCount] = useState(0);
   const [selectedDataCount, setSelectedDataCount] = useState(10);
+
+
+  const navigate = useNavigate();
+
+
+  const handleViewDetailsClick = (item: TableData, index: number) => {
+
+    const query = queryString.stringify({
+      itemId: encodeURIComponent(JSON.stringify(item)),
+      index: index,
+    });
+    navigate(`/user-details?${query}`);
+    return
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -341,13 +364,28 @@ const Users: React.FC = () => {
                       </span>
                     </td>
 
-                    <td className="custom-td other-td" ><img src={ThreeEyes} alt="Three Eyes" onClick={() => handleImageClick(index)} />
+                    <td className="custom-td other-td" >
+                      
+                      
+                      <img src={ThreeEyes} alt="Three Eyes" onClick={() => handleImageClick(index)} />
+
+
                     {showModal && selectedRowIndex === index && (
                       <div className='show-display'>
                         <Filters onClose={() => setShowModal(false)} selectedItem={renderedData[selectedRowIndex]} />
+                        <div className="dropdown">
+    
+        
+         
+      </div>
                       </div>
-                    )}
+                    )}    
+
+
                     </td>
+
+
+
                   </tr> 
                 );
               })}
@@ -507,46 +545,3 @@ const Users: React.FC = () => {
 
 export default Users;
 
-
-{/* Sedond atempt */ }
-
-
-{/* <div className="custom-list">
-        <ul>
-          <li className="custom-header">
-            <span className="custom-column">Organization</span>
-            <span className="custom-th">Username</span>
-            <span className="custom-th">Email</span>
-            <span className="custom-th">Phone Number</span>
-            <span className="custom-th">Date Joined</span>
-            <span className="custom-th">Status</span>
-          </li>
-          {renderedData.map((item, index) => (
-            <li key={index} className={index % 2 === 0 ? 'even' : 'odd'}>
-              <span className="custom-td">{item.orgName}</span>
-              <span className="custom-td">{item.userName}</span>
-              <span className="custom-td">{item.email}</span>
-              <span className="custom-td">{item.phoneNumber}</span>
-              <span className="custom-td">{formatCreatedAt(item.createdAt)}</span>
-              <span className="custom-td">{item.status}</span>
-            </li>
-          ))}
-        </ul>
-      </div> */}
-
-{/* {renderedData.map((item, index) => (
-         
-                <tr key={index} className={index % 2 === 0 ? 'even' : 'odd'}>
-                  <td className="custom-td">{item.orgName}</td>
-                  <td className="custom-td">{item.userName}</td>
-                  <td className="custom-td">{item.email}</td>
-                  <td className="custom-td">{item.phoneNumber}</td>
-                  <td className="custom-td">{formatCreatedAt(item.createdAt)}</td>
-                  <td className="custom-td"></td>
-                  <td className="custom-td"> <img src = {ThreeEyes} /> </td>
-                </tr>
-             
-              ))} */}
-{/* <button className="filter-button" onClick={handleFilterClick}>
-                      <img src={Filter} alt="Filter" className="filter-icon" />
-                    </button> */}

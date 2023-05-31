@@ -1,89 +1,53 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 import "./Login.scss"
 import Logo from "../Images/LendSQRLogo.svg"
 import LoginImage from "../Images/LendSQRLoginImage.svg"
 
+const Login: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [pass, setPass] = useState('');
 
-interface FormValues {
-  email: string;
-  password: string;
-}
-const Login = () => {
-
-  const [formValues, setFormValues] = useState<FormValues>({
-    email: '',
-    password: '',
-  });
-
-  const [showPassword, setShowPassword] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormValues((prevValues) => ({
-      ...prevValues,
-      [name]: value,
-    }));
-  };
-
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
-
+  const navigate = useNavigate();
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Perform form submission logic here
-    console.log(formValues);
+    console.log(email);
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', pass);
+
+    navigate('/users');
   };
+  useEffect(() => {
 
+  }, [navigate]);
+
+ 
   return (
-    <div className="login-container">
-      <div className="login-images">
-        <img src={Logo} alt="LendSQL" />
-        <img src={LoginImage} alt="LendSQL" />
-      </div>
+    <div>
+      
+      <div className="login-container">
+        <div className="login-images">
+        <img src={Logo} alt="LendSQL"/>
+          <img src={LoginImage} alt="LendSQL" />
+        </div>
 
-      <div className="login-form">
-        <h1>Welcome!</h1>
-        <h6>Enter details to login.</h6>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-              value={formValues.email}
-              onChange={handleInputChange}
-              required
-            />
-          </div>
-          <div>
-            <div className="input-wrapper">
-        
-              <input
-                type={showPassword ? "text" : "password"}
-                id="password"
-                name="password"
-                placeholder="Password"
-                value={formValues.password}
-                onChange={handleInputChange}
-                required
-              />
-              <span
-                className={`password-toggle ${showPassword ? 'show' : 'hide'}`}
-                onClick={togglePasswordVisibility}
-              >
-                {showPassword ? "Hide" : "Show"}
-              </span>
-   
-            </div>
+        <div className="auth-form-container">
+          <h2>Welcome!</h2>
+          <p>Enter details to login.</p>
+          <form className="login-form" onSubmit={handleSubmit}>
 
-            <p>Forgot Password?</p>
+            <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@gmail.com" id="email" name="email" className='input-form' />
 
-          </div>
+            <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" className='input-form' />
+            
+            <h6 className='Login-Password'>Forgot PASSWORD?</h6>
 
-          <button type="submit">login</button>
-        </form>
+            <button type="submit" className='button-form'>Log In</button>
+          </form>
+
+        </div>
+
+
       </div>
     </div>
   );
