@@ -1,0 +1,332 @@
+.General {
+  width: 100%;
+}
+
+.Arrow-Users {
+  display: flex;
+  align-items: center;
+}
+.Arrow-Users p {
+  margin: 0;
+}
+
+.UserDetails-Grand {
+  background: #ffffff;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 2rem;
+  padding-bottom: 0rem;
+}
+.UserDetails-Parent {
+  display: flex;
+  align-items: center;
+}
+
+.UserDetails-flex1 {
+  display: flex;
+  align-items: center;
+  //   border-right: 1px solid rgba(84, 95, 125, 0.2);
+  padding-right: 2rem;
+  //   height: 47px;
+}
+
+.UserDetails-flex1 img {
+  margin-right: 10px;
+  border-radius: 100px;
+}
+
+.UserDetails-flex1 div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.UserDetails-flex1 p {
+  margin: 0;
+}
+.UserParagraph {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #213f7d;
+}
+
+.UserPara2 {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #545f7d;
+  padding-top: 0.4rem;
+}
+
+.UserDetails-Tier {
+  margin-left: 3rem;
+  align-items: center;
+  //   border-right: 1px solid rgba(84, 95, 125, 0.2);
+  padding-right: 2rem;
+}
+.UserDetails-Tier img {
+  margin-right: 0px;
+}
+
+.UserDetails-Tier p {
+  margin: 0;
+}
+
+.TierParagraph {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #545f7d;
+}
+.TierImage {
+  padding-top: 0.4rem;
+}
+
+.UserDetails-balance {
+  margin-left: 3rem;
+  align-items: center;
+}
+
+.UserDetails-balance p {
+  margin: 0;
+}
+.BalanceParagraph {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #213f7d;
+}
+
+.BalanParag {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #213f7d;
+  padding-top: 0.4rem;
+}
+
+.UsernavLinks {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.UsernavLinks button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-family: "SF Compact Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.UsernavLinks button:hover {
+  color: #39cdcc;
+}
+.UsernavLinks button:active {
+  color: #39cdcc;
+}
+.UsernavLinks button:focus {
+  color: #39cdcc;
+  border-bottom: 1px solid #39cdcc;
+}
+
+.Personal-General {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #213f7d;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.Personal-Information {
+  display: flex;
+  flex-wrap: wrap !important;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+  padding-bottom: 1rem;
+}
+.Personal-Info h6 {
+  text-transform: uppercase;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+
+  color: #545f7d;
+}
+.Personal-Info p {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #545f7d;
+  text-transform: capitalize;
+}
+
+.Educational-Main {
+  margin-top: 0rem;
+}
+.Educational-General {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #213f7d;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.Educational-Information {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+  padding-bottom: 1rem;
+}
+.Educational-Info h6 {
+  text-transform: uppercase;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+
+  color: #545f7d;
+}
+.Educational-Info p {
+  text-transform: capitalize;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #545f7d;
+}
+
+.Educational-Income-Container {
+  display: flex;
+}
+.Income-Item p {
+  margin: 0;
+}
+
+.Socials-Main {
+  margin-top: 0rem;
+}
+
+.Socials-General {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #213f7d;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.Socials-Information {
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: space-around;
+  gap: 100px;
+  border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+  padding-bottom: 1rem;
+}
+.Socials-Info h6 {
+  text-transform: uppercase;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+
+  color: #545f7d;
+}
+.Socials-Info p {
+  text-transform: capitalize;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #545f7d;
+}
+
+.Guarantor-Main {
+  margin-top: 0rem;
+}
+
+.Guarantor-General {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #213f7d;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.Guarantor-Information {
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: space-around;
+  gap: 100px;
+  border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+  padding-bottom: 1rem;
+}
+
+.Guarantor-Info h6 {
+  text-transform: uppercase;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+
+  color: #545f7d;
+}
+.Guarantor-Info p {
+  text-transform: capitalize;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #545f7d;
+}
+
+.Guarantor-Information2 {
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: space-around;
+  gap: 100px;
+}
