@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+
 import './App.css';
-import Login from './Components/Login';
+
 import Index from "./pages";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
