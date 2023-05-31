@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Logo from '../Images/SwitchOrg.svg';
 import Dashboard from "../Images/Dashboard.svg"
 import UserImage from "../Images/User.svg"
@@ -20,19 +20,7 @@ import Business7 from "../Images/Business7.svg"
 import Business8 from "../Images/Business8.svg"
 import Business9 from "../Images/Business9.svg"
 import Settings1 from "../Images/Settings1.svg"
-import Settings2 from "../Images/Settings2.svg"
-import Settings3 from "../Images/Settings3.svg"
 
-
-import "./Sidebar.scss"
-
-import Guarantors from './Guarantors';
-import Loan from './Loans';
-import LoanRequest from './LoanRequest';
-import Decision from "./Decisionmaking"
-import Karma from "./Karma"
-import WhiteList from './WhiteList';
-import Savings from './Savings';
 
 
 interface User {
@@ -44,9 +32,9 @@ interface User {
 const Sidebar: React.FC = () => {
     const [selectedUser, setSelectedUser] = useState<User | null>(null);
 
-    const [showUsers, setShowUsers] = useState(false);
-    const [showUsersMe, setShowUsersMe] = useState(false);
-    const navigate = useNavigate()
+    // const [showUsers, setShowUsers] = useState(false);
+    // const [showUsersMe, setShowUsersMe] = useState(false);
+    // const navigate = useNavigate()
     const users: User[] = [
         { id: 1, name: 'Organization1' },
         { id: 2, name: 'Organization 2' },
@@ -58,9 +46,9 @@ const Sidebar: React.FC = () => {
     };
 
 
-    const handleGurantorsClick = ()=>{
-        setShowUsersMe(!showUsersMe);
-    }
+    // const handleGurantorsClick = ()=>{
+    //     setShowUsersMe(!showUsersMe);
+    // }
 
     return (
         <div className="sidebar overflow-y-auto">

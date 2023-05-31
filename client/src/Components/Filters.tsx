@@ -5,7 +5,7 @@ import Filter3 from "../Images/Filter3.svg"
 import "./Filter.scss"
 import { useNavigate } from 'react-router-dom';
 import queryString from "query-string";
-import UserDetails from './UserDetails'
+
 
 
 interface TableData {

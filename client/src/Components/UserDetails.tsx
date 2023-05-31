@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./UserDetails.scss"
 import { useNavigate, useLocation, Link } from 'react-router-dom'
 import queryString from "query-string";
-import ProfileImage from "../Images/ProfileImage.svg"
+// import ProfileImage from "../Images/ProfileImage.svg"
 import Tier1 from "../Images/Tier1.svg"
 import Tier2 from "../Images/Tier2.svg"
 import Tier3 from "../Images/Tier3.svg"

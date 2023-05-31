@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import Logo from "../Images/LendSQRLogo.svg"
 import Login from './Login';
 import Signup from './Signup';
